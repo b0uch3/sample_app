@@ -1,6 +1,7 @@
 SampleApp::Application.routes.draw do
   get "cities/new"
-
+  resources :cities 
+  
   resources :users do
     member do
       get :following
@@ -19,6 +20,7 @@ SampleApp::Application.routes.draw do
   match '/about',   to: 'static_pages#about'
   match '/contact', to: 'static_pages#contact'
   match '/home', to: 'static_pages#home'
+  match '/cities', to: 'cities#new'
 
 
   # The priority is based upon order of creation:
