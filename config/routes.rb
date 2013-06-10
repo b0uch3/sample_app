@@ -1,4 +1,6 @@
 SampleApp::Application.routes.draw do
+  get "cities/new"
+
   resources :users do
     member do
       get :following
