@@ -14,4 +14,13 @@ FactoryGirl.define do
     content "Lorem ipsum"
     user
   end
+ 
+  factory :city do
+    name     "Toronto"
+  end
+
+  factory :venue do
+    name    "The Horseshoe Tavern"
+    city
+  end
 end

@@ -10,6 +10,7 @@
 
 class City < ActiveRecord::Base
   attr_accessible :name
+  has_many :venues, dependent: :destroy
   before_save { |city| city.name = name.downcase }
   VALID_CITY_REGEX = /^[a-zA-Z]+$/
   validates :name, presence: true, length: { maximum: 25 }, format: { with: VALID_CITY_REGEX },
