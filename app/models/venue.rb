@@ -10,7 +10,7 @@
 #
 
 class Venue < ActiveRecord::Base
-  attr_accessible  :name
+  attr_accessible  :name, :city_id
   belongs_to :city 
   validates :city_id, presence: true
 
